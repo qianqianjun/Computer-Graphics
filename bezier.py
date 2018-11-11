@@ -31,14 +31,15 @@ def run():
     turtle.pencolor('red')
     T=0.001
     while T<1:
-        B0=(1-T)**5
-        B1=5*T*(1-T)**4
-        B2=10*T**2*(1-T)**3
-        B3=10*T**3*(1-T)**2
-        B4=5*T**4*(1-T)**1
-        B5=T**5
-        x=B0*point[0][0]+B1*point[1][0]+B2*point[2][0]+B3*point[3][0]+B4*point[4][0]+B5*point[5][0]
-        y=B0*point[0][1]+B1*point[1][1]+B2*point[2][1]+B3*point[3][1]+B4*point[4][1]+B5*point[5][1]
+        B0=(1-T)**6
+        B1=6*T*(1-T)**5
+        B2=15*T**2*(1-T)**4
+        B3=20*T**3*(1-T)**3
+        B4=15*T**4*(1-T)**2
+        B5=6*T**5*(1-T)**1
+        B6=T**6
+        x=B0*point[0][0]+B1*point[1][0]+B2*point[2][0]+B3*point[3][0]+B4*point[4][0]+B5*point[5][0]+B6*point[0][0]
+        y=B0*point[0][1]+B1*point[1][1]+B2*point[2][1]+B3*point[3][1]+B4*point[4][1]+B5*point[5][1]+B6*point[0][1]
         turtle.goto(x,y)
         T+=0.001
     turtle.mainloop()
